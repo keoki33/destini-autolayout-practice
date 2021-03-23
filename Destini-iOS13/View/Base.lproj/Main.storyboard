@@ -20,47 +20,51 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="hSN-MU-uqI" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x4v-3L-Ky7" userLabel="Main stack">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rwv-Pi-OXG">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMe-n7-whc" userLabel="Story">
-                                        <rect key="frame" x="186.5" y="0.0" width="41.5" height="409"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMe-n7-whc" userLabel="Story">
+                                        <rect key="frame" x="161" y="0.0" width="52" height="578"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nOC-pF-wi6" userLabel="Button stack">
-                                        <rect key="frame" x="0.0" y="409" width="414" height="409"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kE-91-7mo" userLabel="Choice 1">
-                                                <rect key="frame" x="184" y="0.0" width="46" height="379"/>
-                                                <state key="normal" title="Button"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esf-zS-3hU" userLabel="Choice 2">
-                                                <rect key="frame" x="184" y="379" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="200" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kE-91-7mo" userLabel="Choice 1">
+                                        <rect key="frame" x="0.0" y="598" width="374" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="FoO-jR-hQA"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="s2Z-G4-Ozu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Choice 1" backgroundImage="choice1Background">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esf-zS-3hU" userLabel="Choice 2">
+                                        <rect key="frame" x="0.0" y="718" width="374" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="iyR-nN-hEL"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="pti-U9-U8i"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Choice 2" backgroundImage="choice2Background">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="nOC-pF-wi6" firstAttribute="leading" secondItem="x4v-3L-Ky7" secondAttribute="leading" id="0n0-7M-4pK"/>
-                                    <constraint firstAttribute="trailing" secondItem="nOC-pF-wi6" secondAttribute="trailing" id="4KK-Qh-Tkb"/>
-                                    <constraint firstItem="nOC-pF-wi6" firstAttribute="centerX" secondItem="x4v-3L-Ky7" secondAttribute="centerX" id="P4r-7a-QiV"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x4v-3L-Ky7" secondAttribute="trailing" id="F8P-6n-rJc"/>
-                            <constraint firstItem="hSN-MU-uqI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IYe-lR-AFR"/>
-                            <constraint firstAttribute="trailing" secondItem="hSN-MU-uqI" secondAttribute="trailing" id="K2y-xR-vmp"/>
-                            <constraint firstAttribute="bottom" secondItem="hSN-MU-uqI" secondAttribute="bottom" id="PhA-Mm-teP"/>
-                            <constraint firstItem="x4v-3L-Ky7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Si0-yc-GtO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x4v-3L-Ky7" secondAttribute="bottom" id="gst-Cl-TzM"/>
-                            <constraint firstItem="hSN-MU-uqI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hhz-da-cnb"/>
-                            <constraint firstItem="x4v-3L-Ky7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tMf-7a-hS4"/>
+                            <constraint firstItem="Rwv-Pi-OXG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ITe-Uf-u7F"/>
+                            <constraint firstItem="hSN-MU-uqI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="Uyo-Q6-LCh"/>
+                            <constraint firstItem="hSN-MU-uqI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dc8-9z-IIU"/>
+                            <constraint firstAttribute="bottom" secondItem="hSN-MU-uqI" secondAttribute="bottom" id="emY-R6-AAa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Rwv-Pi-OXG" secondAttribute="bottom" id="g9K-SD-qAM"/>
+                            <constraint firstItem="Rwv-Pi-OXG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gja-EW-q0f"/>
+                            <constraint firstAttribute="trailing" secondItem="Rwv-Pi-OXG" secondAttribute="trailing" constant="20" id="rWU-AV-5I8"/>
+                            <constraint firstItem="hSN-MU-uqI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="waJ-hU-qId"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -71,6 +75,8 @@
     </scenes>
     <resources>
         <image name="background" width="958" height="1793"/>
+        <image name="choice1Background" width="1370.5" height="363"/>
+        <image name="choice2Background" width="1370.5" height="363"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
